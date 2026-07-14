@@ -1,0 +1,16 @@
+Date,Consignee,Shipper,Description,HSN,Weight_kg,Chemistry,Port
+2025-01-10,Ola Electric Mobility Ltd,LG Energy Solution,Cylindrical Li-ion Cells 2170 NMC 811,85076000,45000,NMC 811,Chennai Sea
+2025-01-15,Ather Energy Pvt Ltd,Samsung SDI,Li-ion Cells Cylindrical NMC 622,85076000,18000,NMC 622,Chennai Sea
+2025-01-18,TVS Motor Company Ltd,Samsung SDI,Lithium Ion Cell NMC 532 3.2V,85076000,25000,NMC 532,Chennai Sea
+2025-01-22,Coslight India Telecom Pvt Ltd,Coslight China,Lithium Iron Phosphate LFP cells,85076000,32000,LFP,Nhava Sheva Sea
+2025-01-25,Mahindra & Mahindra Ltd,BYD Battery Co,Prismatic Lithium Cell LFP for EV packs,85076000,68000,LFP,Nhava Sheva Sea
+2025-02-02,Ola Electric Mobility Ltd,LG Energy Solution,Cylindrical Li-ion Cells 2170 NMC 811,85076000,52000,NMC 811,Chennai Sea
+2025-02-05,Ather Energy Pvt Ltd,Samsung SDI,Li-ion Cells Cylindrical NMC 622,85076000,22000,NMC 622,Chennai Sea
+2025-02-12,Hero MotoCorp Ltd (Vida),LG Energy Solution,Cylindrical Cell NMC 811 for Vida pack,85076000,15000,NMC 811,Nhava Sheva Sea
+2025-02-19,Greaves Electric Mobility (Ampere),Gotion Tech,LFP Prismatic Cells for electric 2W,85076000,12000,LFP,Chennai Sea
+2025-02-22,BGauss Auto Pvt Ltd,EVE Energy Co,Lithium Cell LFP 3.2V 100Ah,85076000,8000,LFP,Nhava Sheva Sea
+2025-03-01,Ola Electric Mobility Ltd,LG Energy Solution,Cylindrical Li-ion Cells 2170 NMC 811,85076000,60000,NMC 811,Chennai Sea
+2025-03-05,Ather Energy Pvt Ltd,Samsung SDI,Li-ion Cells Cylindrical NMC 622,85076000,20000,NMC 622,Chennai Sea
+2025-03-10,TVS Motor Company Ltd,Samsung SDI,Lithium Ion Cell NMC 532 3.2V,85076000,28000,NMC 532,Chennai Sea
+2025-03-14,Coslight India Telecom Pvt Ltd,Coslight China,Lithium Iron Phosphate LFP cells,85076000,35000,LFP,Nhava Sheva Sea
+2025-03-20,Tata Motors Ltd / Tata AutoComp,Gotion Tech,Prismatic LFP Battery Pack Cells,85076000,140000,LFP,Nhava Sheva Sea

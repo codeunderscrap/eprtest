@@ -1,0 +1,17 @@
+{
+  "name": "lithium-epr-agent",
+  "version": "1.0.0",
+  "description": "Lithium-Ion Cell Import & EPR Compliance Tracking Agent for MiniMines Cleantech",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "csv-parser": "^3.0.0"
+  },
+  "author": "Antigravity Agent",
+  "license": "MIT"
+}
