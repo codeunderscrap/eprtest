@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MM by HM - Lithium Cell EPR Intelligence Agent</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="glass-bg"></div>
+  <div class="glow-orb" id="orb-1"></div>
+  <div class="glow-orb" id="orb-2"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="main-header">
+      <div class="brand">
+        <div class="logo">
+          <span class="m-green">M</span><span class="m-teal">M</span>
+        </div>
+        <div class="brand-text">
+          <h1>MM by HM</h1>
+          <p>Lithium cell EPR intelligence & OEM Sourcing Portal</p>
+        </div>
+      </div>
+      <div class="system-status">
+        <span class="status-dot green"></span>
+        <span class="status-text">HHM Engine Ready</span>
+      </div>
+    </header>
+
+    <!-- Metrics Grid -->
+    <section class="metrics-grid">
+      <div class="metric-card glass">
+        <h3>Imports Tracked (FY25)</h3>
+        <div class="value" id="metric-imports">0 Tons</div>
+        <p class="desc">Lithium cell weight in import records</p>
+        <div class="trend positive">↑ Active monitoring</div>
+      </div>
+      <div class="metric-card glass">
+        <h3>EPR Liability Pool</h3>
+        <div class="value text-warning" id="metric-liability">0 Tons</div>
+        <p class="desc">Mandatory collection target (80% for EV/Portable)</p>
+        <div class="trend text-warning">Pending certification exchange</div>
+      </div>
+      <div class="metric-card glass">
+        <h3>Low Hanging Fruits</h3>
+        <div class="value text-teal" id="metric-leads">0</div>
+        <p class="desc">OEMs with no recycling partner</p>
+        <div class="trend text-teal">Ready for partnership pitches</div>
+      </div>
+    </section>
+
+    <!-- Main Workspace -->
+    <div class="workspace-grid">
+      <!-- Left Column: OEM Matrix -->
+      <main class="matrix-section glass">
+        <div class="section-header">
+          <h2>OEM Targeting & EPR Matrix</h2>
+          <div class="filters">
+            <select id="filter-sector">
+              <option value="all">All Sectors</option>
+              <option value="EV 2W">EV 2-Wheelers</option>
+              <option value="EV 4W">EV 4-Wheelers</option>
+              <option value="Telecom / ESS">Telecom & ESS</option>
+            </select>
+            <select id="filter-partner">
+              <option value="all">All Partners</option>
+              <option value="None">No Partner (Low-hanging)</option>
+              <option value="In-talks">In-talks</option>
+              <option value="Partnered">Partnered</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table id="oem-table">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Sector</th>
+                <th>Chemistry</th>
+                <th>2025 Imports (T)</th>
+                <th>2025 EPR Target (T)</th>
+                <th>Partner</th>
+                <th>Priority</th>
+                <th>Lead Score</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="oem-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      <!-- Right Column: Agent & Calculator -->
+      <aside class="sidebar-section">
+        
+        <!-- AI Agent Console -->
+        <div class="agent-panel glass">
+          <div class="panel-header">
+            <h3>AI Sourcing Agent Console</h3>
+            <span class="agent-badge">Active Agent</span>
+          </div>
+          <div class="agent-body">
+            <div class="agent-instructions" id="agent-intro">
+              <p>Select any OEM from the table on the left or type a custom company query to run a target analysis report.</p>
+              <div class="quick-queries">
+                <button class="btn btn-secondary quick-btn" data-oem="ather-energy">Analyze Ather Energy</button>
+                <button class="btn btn-secondary quick-btn" data-oem="tvs-motor">Analyze TVS Motor</button>
+                <button class="btn btn-secondary quick-btn" data-oem="ola-electric">Analyze Ola Electric</button>
+              </div>
+            </div>
+            <div class="agent-console" id="agent-console" style="display: none;">
+              <div class="console-logs" id="console-logs"></div>
+              <div class="console-spinner" id="console-spinner">
+                <div class="spinner"></div>
+                <span>Agent processing CPCB and import logs...</span>
+              </div>
+            </div>
+            <div class="agent-report" id="agent-report" style="display: none;">
+              <!-- Reports rendered here -->
+              <div class="report-header">
+                <h4 id="report-title">Targeting Brief</h4>
+                <button class="btn btn-small" id="btn-back-agent">Run New Query</button>
+              </div>
+              <div class="report-content" id="report-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EPR & Metal Recovery Calculator -->
+        <div class="calculator-panel glass">
+          <div class="panel-header">
+            <h3>HHM™ Metal Recovery & Credit Estimator</h3>
+          </div>
+          <div class="calc-body">
+            <div class="form-group">
+              <label for="calc-chemistry">Battery Chemistry</label>
+              <select id="calc-chemistry">
+                <option value="NMC 811">NMC 811 (High-Nickel Cylindrical)</option>
+                <option value="NMC 622">NMC 622 (Premium Cylindrical/Pouch)</option>
+                <option value="NMC 532">NMC 532 (Standard Pack)</option>
+                <option value="LFP">LFP (Lithium Iron Phosphate)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="calc-weight">Battery Weight to Recycle (Tons)</label>
+              <input type="number" id="calc-weight" value="100" min="1">
+            </div>
+            <button class="btn btn-primary w-100" id="btn-calculate">Estimate Yield & EPR Credits</button>
+
+            <div class="calc-results" id="calc-results" style="display: none;">
+              <h4>Estimated Recovery Yield (99% Efficiency)</h4>
+              <div class="metals-grid" id="metals-grid">
+                <!-- Populated by JS -->
+              </div>
+              <div class="epr-credits-box">
+                <p>Estimated CPCB EPR Certificates Generated</p>
+                <div class="credits-value" id="credits-value">0 Tons</div>
+                <small>Based on total metal mass recovered and registered under CPCB guidelines.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customs CSV Import Zone -->
+        <div class="import-panel glass">
+          <div class="panel-header">
+            <h3>Update Database via Customs Log (HSN 85076000)</h3>
+          </div>
+          <div class="import-body">
+            <p class="import-desc">Upload a CSV containing cell import logs to automatically aggregate imports and recalculate EPR targets.</p>
+            <div class="dropzone" id="dropzone">
+              <input type="file" id="file-input" accept=".csv" style="display: none;">
+              <svg class="upload-icon" viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+              </svg>
+              <p>Drag and drop your import CSV here, or <span class="file-trigger">browse files</span></p>
+            </div>
+            <div class="import-actions">
+              <a href="#" id="download-sample-link" class="download-link">Download Sample Import Log (.csv)</a>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    <p>© 2026 MM by HM Solutions. Proprietary Circular Economy Sourcing Agent.</p>
+  </footer>
+
+  <script src="oems-data.js"></script>
+  <script src="agent.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
